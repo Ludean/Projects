@@ -13,14 +13,13 @@
 
 /*Route::get('/', 'WelcomeController@index');*/
 Route::get('/', 'WelcomeController@index');
-Route::get('inicio', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
-/*Route::get('test', function()
+Route::get('test', function()
 	{
 		return View::make('test',array('name'=>'Luis'));
 	});
-*/
-Route::get('/test','testcontroller@index');
+
+//Route::get('/test','testcontroller@index');
 Route::get('/db',function()
 	{
 	  /*DB::table('odot')->insert(
