@@ -1,0 +1,19 @@
+grid()
+	.row
+		width 100%
+		box-sizing border-box
+		&:before
+		&:after
+			content ''
+			display table
+			clear both
+		[class^="col-"]
+			float left
+			min-height 1px
+			box-sizing border-box
+		total = start
+		for n, x in 0..((end - start) / increment)
+			.column-{x+1}
+				width total
+			total = total + increment
+		

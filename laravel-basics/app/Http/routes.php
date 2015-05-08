@@ -26,10 +26,10 @@ Route::get('/db',function()
 	  /*DB::table('odot')->insert(
         array('name'=>'Hola :3')
 	  	);*/
-      //return DB::table('odot')->get();
-      $result= DB::table('odot')->where('idodot',2)->first();
+      return DB::table('odot')->get();
+     // $result= DB::table('odot')->where('idodot',2)->first();
       //var_dump($result);
-      return $result->name;
+      //return $result->name;
 	});
 
 Route::controllers([
