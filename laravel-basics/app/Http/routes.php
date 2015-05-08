@@ -13,6 +13,7 @@
 
 /*Route::get('/', 'WelcomeController@index');*/
 Route::get('/', 'WelcomeController@index');
+Route::get('inicio', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
 /*Route::get('test', function()
 	{
@@ -22,7 +23,13 @@ Route::get('home', 'HomeController@index');
 Route::get('/test','testcontroller@index');
 Route::get('/db',function()
 	{
-      return DB::select('select database();');
+	  /*DB::table('odot')->insert(
+        array('name'=>'Hola :3')
+	  	);*/
+      //return DB::table('odot')->get();
+      $result= DB::table('odot')->where('idodot',2)->first();
+      //var_dump($result);
+      return $result->name;
 	});
 Route::controllers([
 	'auth' => 'Auth\AuthController',
