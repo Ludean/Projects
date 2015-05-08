@@ -1,0 +1,1144 @@
+@import '../lib/index'
+@import 'animate'
+
+/* ===============
+   COLORES
+   =============== */
+
+negro = #2f2f30
+negro_2 = #434343
+azul = #25a8cc
+gris = #f3f0f0
+border-color = #A3A2A3
+light-gray = #cacaca
+/* ===============
+   RESETS
+   =============== */
+
+normalize()
+box_reset()
+
+ul
+nav
+li
+figure
+p
+h1
+h2
+h3
+	margin 0
+	padding 0
+
+a
+	text-decoration none
+
+html
+body
+	size(100%)
+body
+	background gris
+	
+	
+li
+	list-style none
+
+
+	
+/* ===============
+   USEFUL CLASS
+   =============== */
+  
+.center-text
+	text-align center
+
+.overflow
+	overflow hidden
+	size(100%)
+	position fixed
+
+.active
+	background azul
+	svg
+		fill white
+	&:after
+		content ''
+		triangle(bottom, 15px, azul)
+		position absolute
+		bottom -7px
+		left 50%
+		margin-left -7px
+		z-index 500
+
+.mostrar-menu
+	display block !important
+
+
+.web-container
+	max-width 1280px
+	margin auto
+	clearfix()
+	
+/* ===============
+   TIPOGRAFIA 
+   =============== */
+   
+h2
+h1
+	font-family 'Roboto Condensed', sans-serif
+h3
+p
+	font-family 'Roboto', sans-serif
+	
+
+
+
+/* ===============
+   OVERLAY/LOGIN
+   =============== */
+
+.overlay
+	position absolute
+	size(100%)
+	background rgba(black, .25)
+	top 0
+	left 0
+	z-index 999
+	.login
+		width 90%
+		height auto
+		background white
+		position relative
+		margin auto
+		top 1em
+		padding 1em
+		text-align center
+		box-shadow 0px 0px 5px rgba(negro, .50)
+		h2
+			font-size em(20px)
+			text-align center
+			margin-bottom 10px
+		p
+			font-size 3vw
+			margin-bottom 10px
+		.btn
+			width 80%
+			line-height 45px
+			margin auto
+			margin-bottom 5px
+			height 45px
+			display block
+			background red
+			border-radius 3px
+		.facebook-login
+			background #46619c
+			color white
+		.google-login
+			background white
+			border 1px solid #a3a2a3
+		hr
+			width 90%
+			background rgba(#a3a2a3, .25)
+			height 1px
+			border 0
+		.login-wrapper
+			width 90%
+			margin auto
+		input[type="text"]
+			size(90%, 40px)
+			margin-bottom 5px
+			border-radius 3px
+			padding-left 5px
+			border 1px solid #a3a2a3
+		span
+			font-size em(10px)
+			color #a3a2a3
+			display block
+			text-align left
+			font-weight 300
+			margin-bottom 5px
+		.contraseña
+			text-decoration underline
+			font-size em(12px)
+			font-weight 300
+			color negro
+			float left
+		input[type="checkbox"]
+			circle(12px)
+			border-radius 0
+			float right
+		label
+			font-size em(12px)
+			float right
+			margin-left 5px
+		button
+			border-radius 3px
+			background azul
+			color white
+			margin 10px auto 0px
+			width 200px
+			height 40px
+			border none
+		.cuenta
+			margin-bottom 0px
+		.login-link
+			color azul 
+			font-size em(14px)
+/* ===============
+   HEADER
+   =============== */
+
+/* MENU ICON */
+
+.menu-icon
+	fill white
+	size(30px)
+
+.top-nav 
+	background negro
+	size(100%, 48px)
+	color white
+	font-family 'Roboto Condensed', sans-serif
+	z-index 500
+	position relative
+	clearfix()
+	@media screen and (min-width: 1024px)
+		top 0
+		position fixed
+	header
+		@media print
+			display none
+		@media screen and (min-width: 1024px)
+			max-width 1280px
+			margin auto
+		figure
+			height 48px
+			line-height 48px
+			display inline-block
+			img
+				vertical-align middle
+				padding-left em(5px)
+		.mobile-menu
+			size(48px)
+			display inline-block
+			position absolute
+			right 0
+			transition all 500ms
+			.menu-icon
+				position relative
+				top 9px
+			@media screen and (min-width: 1024px)
+				display none
+		nav
+			right 0
+			top 48px
+			clearfix()
+			width 80%
+			height  100%
+			position fixed
+			background negro_2
+			display none
+			animation-duration: 500ms;
+			@media screen and (min-width: 1024px)
+				display inline-block
+				float right
+			.user-login
+				.user-photo
+					margin em(10px)
+					clearfix()
+					float right
+					circle(60px)
+					overflow hidden
+					border 3px solid rgba(negro, .75)
+					img
+						width 100%
+				.user-name
+					float right
+					margin-top 1.3em
+					text-align right
+					span
+						display block
+						font-size em(20px)
+					a
+						color azul
+						font-weight 300
+						font-size em(14px)
+						margin-left 10px
+						margin-top 5px
+						display inline-block
+			.login-options
+				text-align center
+				a
+					color azul
+					width 49%
+					line-height 40px
+					font-size em(14px)
+					display inline-block
+			.search-box
+				text-align center
+				padding-bottom em(10px)
+				border-bottom 1px solid rgba(negro, .25)
+				position relative
+				clear both
+				input
+					size(92%, 45px) 
+					border-radius 5px
+					background rgba(negro, .50)
+					border none
+					font-size em(14px)
+					font-weight 300
+					padding-left 10px
+				&:after
+					content ''
+					position absolute
+					right 8%
+					top 14.5px
+					size(16px)
+					display block
+					background url('/svg/search.svg')
+					background-repeat no-repeat
+					background-size 16px
+			ul
+				width 100%
+				z-index 60
+				clear both
+				@media screen and (min-width: 1024px)
+					background inherit
+				li
+					width 92%
+					text-align right
+					display block
+					position relative
+					@media screen and (min-width: 1024px)
+						display inline-block
+						width 175px
+					a
+						color white
+						font-size 1em
+						line-height 48px
+						display block
+						svg
+							fill azul
+							size(15px)
+							position absolute
+							right 2em
+							top 15px
+							transition rotate 1s ease-out
+							@media screen and (min-width: 1024px)
+								display none
+							
+					@media screen and (min-width: 1024px)
+						li
+						&:hover ul 
+							display block
+					ul
+						display none
+						background border-color
+						@media screen and (min-width: 1024px)
+							position absolute
+							background gris
+							box-shadow 0px 0px 5px rgba(negro_2, .50)
+							li
+								width 250px
+								text-align left
+								a
+									color negro_2
+									display block
+									padding-left 1em
+									&:hover
+										background negro_2
+										color white
+
+/* ===============
+   SLIDER
+   =============== */
+   
+#slider-container
+	position relative
+	@media screen and (min-width: 1024px)
+		top 48px
+	#slider
+		size(100%, 350px)
+		z-index 10
+		position relative
+		@media screen and (min-width: 1024px)
+			height 500px
+		.slider-item
+			overflow hidden
+			size(100%)
+			img
+				width auto 
+				height 350px
+				@media screen and (min-width: 1024px)
+					width 100%
+					height auto
+			&:after
+				content ''
+				position absolute
+				top 0
+				left 0
+				size(100%)
+				background rgba(negro, .25)
+				
+	.slider-buttons
+		width 100%
+		position absolute
+		top 50%
+		margin-top -50px
+		z-index 10
+		padding 0 .5em 0 .5em
+		@media screen and (min-width: 1024px)
+			top 265px
+		.slider-button
+			background rgba(gris, .75)
+			circle(48px)
+			fill negro_2
+			padding em(10px)
+			position relative
+			box-shadow 0px 0px 5px rgba(negro_2, .25)
+		#slider-prev
+		#slider-next
+			display inline-block
+			z-index 30
+			cursor pointer
+		#slider-next
+			float right
+
+.cycle-overlay
+	position absolute
+	bottom 1em
+	z-index 10
+	right 0
+	text-align center
+	@media screen and (min-width: 1024px)
+		text-align right
+		right 1em
+	div:first-child
+		font-size 3em
+		color white
+		font-family 'Roboto Condensed', sans-serif
+		font-weight 700
+		text-shadow 0px 0px 10px negro
+	div:last-child
+		color white
+		font-family 'Roboto', sans-serif
+		font-weight 300
+		padding em(5px)
+		margin em(5px)
+		background rgba(negro, .75)
+		@media screen and (min-width: 1024px)
+			font-size 1em
+			padding 1em
+	
+	
+/* ===============
+   CAROUSEL 
+   =============== */
+  
+.slick-dots
+	text-align center
+	li
+		display inline-block
+		button
+			display none
+		&:after
+			content ''
+			display inline-block
+			circle(15px)
+			background border-color
+			margin 3px
+			
+/* DOT ACTIVE COLOR */
+.slick-active
+	&:after
+		background azul !important
+		
+.carousel-container
+	@media print
+		display none
+	clearfix()
+	text-align center
+	@media screen and (min-width: 1024px)
+		max-width 1280px
+		text-align left
+		margin auto
+	h3
+	a
+		margin 1em 1em	
+	h3
+		font-weight 300 
+		border-bottom 1px solid border-color
+		display inline-block
+	a
+		font-weight 700
+		font-size 1em
+		color azul
+		float right
+		font-family 'Roboto Condensed', sans-serif
+		border-bottom 1px dotted rgba(border-color, .0)
+		&:hover
+			border-bottom 1px dotted border-color 
+.carousel-item
+	margin em(10px)
+	background white
+	height 200px
+	border 1px solid rgba(border-color, .35);
+	img
+		width 100%
+		height auto
+	h2
+	p
+		font-weight 300
+	h2
+		font-size 1.5em
+		color negro
+	p
+		font-size 1em
+		color negro_2
+		margin 0 0 .5em 0
+
+.carousel-next
+.carousel-prev
+	fill border-color
+	size(48px)
+	padding 5px
+	cursor pointer
+	position absolute
+	top 50%
+	margin-top -48px
+
+.carousel-prev
+	left -48px
+
+.carousel-next
+	right -48px
+
+
+/* ===============
+   ANUNCIO DESTACADO
+   =============== */
+   
+.destacado-container
+	margin 1em 0em
+	size(100%, 350px)
+	position relative
+	overflow hidden
+	box-shadow inset 0 0 5px #000000
+	.destacado-fondo
+		clearfix()
+		img
+			position absolute
+			size(100%)
+			filter blur(2px)
+	/*
+	&:after
+		content ''
+		display block
+		position absolute
+		background rgba(negro, .50)
+		size(100%)
+		top 0
+		left 0
+	*/
+	.destacado
+		max-width 1024px
+		width 90%
+		height 70%
+		background rgba(negro, .75)
+		position relative
+		margin auto
+		top 15%
+		padding 2.5em 1em
+		border-radius 1em 0px 1em 0px
+		clearfix()
+		img
+			circle(75px)
+			top -37px
+			right 0
+			background white
+			position absolute
+			box-shadow 0px 0px 10px negro
+			@media screen and (min-width: 1024px)
+				circle(150px)
+				top -40px
+				right -50px
+		p
+		h1
+			color white
+		h1
+			font-size 1.5em
+			font-weight 700
+			@media screen and (min-width: 1024px)
+				font-size 3em
+		p
+			font-size 1em
+			width 90%
+			font-weight 300
+			font-family 'Roboto', sans-serif
+			@media screen and (min-width: 1024px)
+				width 50%
+				font-size 1.2em
+		button
+			background azul
+			width 150px
+			height 48px
+			font-family 'Roboto Condensed', sans-serif
+			color white
+			border none
+			box-shadow 0px 0px 5px negro
+			float right
+			margin 1em 0em 0em 0em
+			border-radius 10px 0px 10px 0px
+
+
+/* ===============
+   COMPROMISO
+   =============== */
+   
+.compromiso-container
+	background url('../img/compromiso.jpg')
+	background-size cover
+	background-repeat no-repeat
+	height auto
+	color white
+	width 100%
+	text-align center
+	padding 3em 1em
+	margin 1em 0em
+	h3
+		font-family 'Roboto', sans-serif
+		font-weight 300
+		font-size 2em
+		margin-bottom em(5px)
+	.compromiso-slider
+		width 100%
+		h3
+			font-size 1em
+			font-family 'Roboto Condensed', sans-serif
+			font-weight 700
+			@media screen and (min-width: 1024px)
+				font-size 1.5em
+
+/* ===============
+   FOOTER
+   =============== */
+   
+footer
+	@media print
+		display none
+	background negro
+	overflow auto
+	text-align center
+	color white
+	margin .5em 0em 0em
+	img
+		width 150px
+		height auto
+		margin 1em 0em .5em
+	span
+		display block
+		font-size em(14px)
+		padding 0 em(10px)
+		margin-bottom .5em
+		font-family 'Roboto', sans-serif
+		font-weight 100
+	.footer-icons
+		svg
+			display inline-block
+			size(25px)
+			fill white
+			margin em(10px)
+			vertical-align middle
+	li
+		display inline-block
+		margin-bottom em(10px)
+		height 20px
+		a
+			color white
+			font-size em(12px)
+			text-decoration underline
+			
+
+/* ==========================================================================================
+   FILTROS
+   ========================================================================================== */
+   
+@import 'nouislider.styl'
+
+.filtros
+	background gris
+	width 100%
+	height auto
+	padding 0em em(10px)
+	position relative
+	@media screen and (min-width: 1024px)
+		float left	
+		width 250px
+		margin-top 48px
+		h2
+			display none
+	.space
+		padding .5em
+		border 1px solid rgba(border-color, .35);
+		background white
+		width 100%
+		margin 5px 0px
+		box-shadow 0px 1px 2px rgba(border-color, .35);
+	li
+		margin em(5px) 0em
+	h2
+		font-weight 300
+		text-align center
+		color border-color
+		padding em(10px)
+	span
+		font-family 'Roboto Condensed', sans-serif
+		font-weight 700
+		margin auto
+		color azul
+		font-size em(25px)
+		@media screen and (min-width: 1024px)
+			font-size 1.1em
+			font-weight 400
+	input[type="checkbox"]
+		display none
+	label
+		font-family 'Roboto', sans-serif
+		font-weight 300
+		font-size em(20px)
+		position relative
+		margin-left 40px
+		line-height 40px
+		cursor pointer 
+		@media screen and (min-width: 1024px)
+			margin-left 25px
+			font-size 1em
+			line-height 30px
+			border-bottom 1px dotted border-color
+		svg
+			circle(30px)
+			background light-gray
+			padding em(5px)
+			fill rgba(white, .0)
+			transition all 1s
+			position absolute
+			top -2px
+			left -40px
+			@media screen and (min-width: 1024px)
+				circle(20px)
+				left -25px
+				top 0
+	select
+		width 100%
+		height 35px
+		margin 5px 0px
+	input[type="checkbox"]:checked + label
+		svg
+			fill white
+			background azul
+	#slider-tooltip
+		margin 3em 2em 1em 
+	.botones
+		text-align center
+		width 100%
+		margin .5em 0em
+		@media screen and (min-width: 1024px)
+			display none
+		button
+			border-radius 0px
+			-webkit-appearance none
+			width 125px
+			height 48px
+			background azul
+			color white
+			border 1px solid rgba(border-color, .35)
+.tooltip 
+	display block
+	position absolute
+	border 1px solid #D9D9D9
+	font 400 12px/12px Arial
+	border-radius 3px
+	background #fff
+	top -30px
+	padding 5px
+	text-align center
+	span
+		font-family 'Roboto', sans-serif
+		font-weight 300
+		font-size em(14px)
+		@media screen and (min-width: 1024px)
+			font-size 1em
+/* ==========================================================================================
+   ANUNCIOS
+   ========================================================================================== */
+.anuncios
+	width 100%
+	background gris
+	font-family 'Roboto Condensed', sans-serif
+	@media screen and (min-width: 1024px)
+		margin-top 48px
+	.numero-anuncios
+		margin 0em 1em
+		span
+			font-size 4em
+			font-weight 100
+			color azul
+			font-family 'Roboto', sans-serif
+		strong
+			font-weight 700
+			color negro_2
+			font-size 1.5em
+	.left
+		@media screen and (min-width: 1024px)
+			float left
+	.right
+		@media screen and (min-width: 1024px)
+			float right
+			width calc(100% - 380px)
+			padding-left 1em
+	@media screen and (min-width: 1024px)
+		width calc(100% - 250px)
+		float right
+		padding 0
+	.anuncio
+		background white
+		position relative
+		margin .5em .5em
+		@media screen and (min-width: 1024px)
+			margin .3em 0em
+		clearfix()
+		border 1px solid rgba(border-color, .35)
+		@media screen and (min-width: 1024px)
+			height 250px
+		img
+			width 100%
+			height auto
+			padding em(5px)
+			@media screen and (min-width: 1024px)
+				width 380px
+				height 250px
+				float left
+	.favorito
+		fill border-color
+		size(35px)
+		float right
+		margin  0em .5em
+		svg
+			size(35px)
+		@media screen and (min-width: 1024px)
+			position absolute
+			right 0
+			top -8px
+	.precio
+	.nombre
+	.lugar
+	.descripcion
+		margin .2em .5em
+		@media screen and (min-width: 1024px)
+			display block
+			margin 0
+	.precio
+	.lugar
+		font-family 'Roboto Condensed', sans-serif
+	.precio
+		font-weight 400
+		color azul
+		font-weight bold
+		font-size 1.1em
+		@media screen and (min-width: 1024px)
+			margin 1em 0em .5em
+	.nombre
+	.descripcion
+		font-weight 300
+	.lugar
+		color negro_2
+	.nombre
+		font-size 1.6em
+		color negro
+		margin 0
+		@media screen and (min-width: 1024px)
+			margin .5em 1em .5em 0em
+	.descripcion	
+		text-align justify
+		color border-color
+		font-size 1em
+		padding-right 1em
+		@media screen and (min-width: 1024px)
+			margin .5em 0em
+			padding-right 5em
+	button
+		-webkit-appearance none
+		width 125px
+		height 40px
+		background azul
+		border 1px solid rgba(border-color, .35)
+		color white
+		margin .5em
+		float right
+.paginacion
+	width 250px
+	margin auto
+	ul
+		height 50px
+		li
+			size(40px)
+			float left
+			margin 0em em(5px)
+			background azul
+			color white
+			line-height 40px
+			text-align center
+			font-family 'Roboto Condensed', sans-serif
+			svg
+				fill white
+				size(20px)
+				vertical-align middle
+
+/* ==========================================================================================
+   ANUNCIO PUBLICADO
+   ========================================================================================== */
+   
+.anuncio-title
+	position relative
+	@media screen and (min-width: 1024px)
+		background white
+		z-index 250
+		width 100%
+		top 48px
+		border-bottom 1px solid rgba(border-color, .35)
+		box-shadow 0px 1px 2px rgba(border-color, .35)
+	@media print
+		position relative
+	.title
+		max-width 1280px
+		margin auto
+		padding .5em
+		position relative
+		clearfix()
+		button 
+			display none
+			-webkit-appearance none
+			position absolute
+			right 1em 
+			top 1.3em
+			height 50px
+			font-size .9em
+			padding 0em 1em
+			background azul
+			border-radius 2px
+			border none
+			font-family 'Roboto Condensed', sans-serif
+			color white
+			transition all .5s ease
+			&:hover
+				background rgba(azul, .75)
+			@media screen and (min-width: 1024px)
+				display block
+		h1
+		a
+			font-family 'Roboto', sans-serif
+			font-weight 100
+		a
+			font-weight 300
+			color negro_2
+			text-decoration underline
+			@media screen and (min-width: 1024px)
+				padding-left 1em
+		span
+		a
+			font-family 'Roboto Condensed', sans-serif
+			margin .5em 0em
+		span
+			color azul
+			font-weight 700
+			position relative
+			svg
+				fill border-color
+				size(15px)
+				@media screen and (min-width: 1024px)
+					position absolute
+					left 0
+					top 2px
+		.precio
+			display block
+			@media screen and (min-width: 1024px)
+				display inline-block
+				border-right 1px dotted border-color
+				padding-right .5em
+				font-size 1em
+.anuncio-publicado
+	max-width 1280px
+	@media screen and (min-width: 1024px)
+		margin auto
+
+	.anuncio-slider
+		width 100%
+		margin .5em 0em
+		position relative
+		overflow hidden
+		@media screen and (min-width: 1024px)
+			height 500px
+		img
+			width 100%
+			height auto
+		.anuncio-controles
+			width 100%
+			position absolute
+			top 50%
+			margin-top -25px
+			z-index 200
+			padding 0em .5em
+			@media print
+				display none
+			clearfix()
+			#anuncio-next
+			#anuncio-prev
+				cursor pointer
+			#anuncio-next
+				float right
+			#anuncio-prev
+				float left
+			svg
+				fill azul
+				circle(50px)
+				background white
+				padding em(13px)
+				box-shadow 0px 0px 5px rgba(negro_2, .25)
+	.anuncio-informacion
+		margin .5em
+		padding-left .5em
+		background white
+		border 1px solid rgba(border-color, .35)
+		text-align center
+		@media print
+			border none
+		@media screen and (min-width: 1024px)
+			margin 0
+		span
+		.categoria
+		.precio
+		p
+			text-align left
+		span
+			display block
+			font-size 1.2em
+		.categoria
+			color negro_2
+			font-weight 100
+			padding .5em
+			font-family 'Roboto', sans-serif
+			@media screen and (min-width: 1024px)
+				font-size 1.5em
+				font-weight 300
+		p
+			font-family 'Roboto', sans-serif
+			font-weight 300
+			padding .5em .5em 
+			color  negro_2
+			@media print
+				text-align justify
+			@media screen and (min-width: 1024px)
+				padding .5em .5em 1em
+				font-size 1em
+		button 
+			-webkit-appearance none
+			height 48px
+			background azul
+			border none
+			color white
+			margin .5em
+			font-family 'Roboto Condensed', sans-serif
+			@media print
+				display none
+			@media screen and (min-width: 1024px)
+				display none
+		.acerca
+			color border-color
+			font-family 'Roboto Condensed', sans-serif
+			font-size em(14px)
+			@media screen and (min-width: 1024px)
+				font-size 1em
+				margin .5em 0em
+		.anuncio-botones
+			@media print
+				display none
+			clearfix()
+			float right
+			.boton
+				fill azul
+				margin .5em
+				float left
+				svg
+					size(25px)
+	.anuncio-detalles
+		display table
+		margin .5em 0em
+		width 100%
+		@media screen and (min-width: 1024px)
+			width 300px
+			margin 0em
+		.detalle
+			clearfix()
+			background azul
+			width 100px
+			display inline-block
+			padding 2px
+			margin .5em 
+			box-sizing border-box
+			span
+			strong
+				line-height 30px
+				width 100%
+			strong
+				color white
+				font-weight 400
+				font-family 'Roboto Condensed', sans-serif
+			span
+				background white
+				margin 0
+				text-align center
+				font-family 'Roboto Condensed', sans-serif
+				
+.social-media
+	position fixed
+	z-index 999
+	width 100%
+	height 100%
+	text-align center
+	background rgba(gris, .50)
+	.close-social
+		position absolute
+		top 0
+		right 0
+		svg
+			fill negro_2
+			size(30px)
+	.media-container
+		vertical-align middle
+		margin auto
+		top 50%
+		position relative
+		margin-top -50px
+		.media
+			margin auto
+			width 170px
+			div
+				float left
+				margin .2em
+				box-shadow 0px 0px 5px black
+				background negro_2
+				svg
+					size(50px)
+					fill white
+					padding 5px
+					border-radius 2px
+					line-height 50px
+					vertical-align middle
+
+.mymove
+	animation mymove .5s ease
+	
+@keyframes mymove {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
