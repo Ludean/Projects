@@ -12,13 +12,14 @@
 */
 
 /*Route::get('/', 'WelcomeController@index');*/
+/*Route::get('/', 'WelcomeController@index');*/
 Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
-Route::get('test', function()
+/*Route::get('test', function()
 	{
 		return View::make('test',array('name'=>'Luis'));
 	});
-
+*/
 //Route::get('/test','testcontroller@index');
 Route::get('/db',function()
 	{
@@ -30,6 +31,7 @@ Route::get('/db',function()
       //var_dump($result);
       return $result->name;
 	});
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
