@@ -66,25 +66,30 @@
 
                 <!-- FOTO DEL USUARIO -->
                 <figure>
-                    <img src="img/logo.svg" alt="Emprendox">
+                    <img class="logo-mobile" srcset="img/logo.svg" alt="Emprendox Ecuador"/>
+                    <img class="logo-desktop" srcset="img/emprendox-logo-large.svg" alt="Emprendox Ecuador"/>
                 </figure>
 
                 <div class="mobile-menu center-text">
                     <svg class="menu-icon">
-                        <use class="lol" xlink:href="#menu" />
+                        <use xlink:href="#menu" />
                     </svg>
                 </div>
 
                 <div class="login-menu-button">
 
-                    <!-- SI EL USUARIO ESTA LOGEADO -->
+                    <!-- SI EL USUARIO ESTA LOGEADO 
+
                     <div id="profile-photo">
                         <img src="/svg/photo-default.svg" alt="">
                     </div>
+                    
+                    -->
 
-                    <!-- SI EL USUARIO NO ESTA LOGEADO -->
+                    <!-- SI EL USUARIO NO ESTA LOGEADO  -->
                     <div id="login-button">
                         <img src="/svg/photo-default.svg" alt="">
+                        <p>Iniciar sesión</p>
                     </div>
 
                 </div>
@@ -131,7 +136,6 @@
                                 <li><a href="comprar.html">COMPRAR</a></li>
                                 <li><a href="">VENDER</a></li>
                                 <li><a href="">ALQUILAR</a></li>
-                                <li><a href="">OPORTUNIDADES DE NEGOCIO</a></li>
                             </ul>
                         </li>
                         <li><a href="" id="franquicias">FRANQUICIAS</a>
@@ -140,8 +144,7 @@
                                 <li><a href="">BUSCAR FRANQUICIA</a></li>
                             </ul>
                         </li>
-                        <li><a href="">NOSOTROS</a></li>
-                        <li><a href="">CONTACTO</a></li>
+                        <li><a href="">OPORTUNIDADES DE NEGOCIO</a></li>
                     </ul>
 
                 </nav>

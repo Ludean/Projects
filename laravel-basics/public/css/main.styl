@@ -230,23 +230,36 @@ p
 	z-index 500
 	position fixed
 	clearfix()
+	top 0
 	@media screen and (min-width: 1024px)
-		top 0
-		position fixed
+		height 90px
 	header
 		@media print
 			display none
 		@media screen and (min-width: 1024px)
 			max-width 1280px
 			margin auto
+			position relative
 		figure
 			size(100%, 48px)
 			line-height 48px
 			display inline-block
 			text-align center
+			@media screen and (min-width: 1024px)
+				width 222px
+				line-height 90px
+				height 90px
 			img
 				vertical-align middle
 				padding-left em(5px)
+			.logo-mobile
+				@media screen and (min-width: 1024px)
+					display none
+			.logo-desktop
+				display none
+				@media screen and (min-width: 1024px)
+					display inline-block
+					height 40px
 		.mobile-menu
 			size(48px)
 			display inline-block
@@ -263,9 +276,39 @@ p
 			position absolute
 			top 0
 			left 0
-			img
-				width 100%
-				padding 7px
+			overflow hidden
+			@media screen and (min-width: 1024px)
+				right 0
+				top 25px
+				left auto
+				z-index 500
+				size(auto)
+				border-radius 0
+			#profile-photo
+			#login-button
+				img
+					width 100%
+					height auto
+					padding 7px
+			#profile-photo
+				@media screen and (min-width: 1024px)
+					circle(50px)
+			#login-button
+				circle(48px)
+				@media screen and (min-width: 1024px)
+					size(110px, 40px)
+					border-radius 5px
+					text-align center
+					line-height 40px
+					font-size em(14px)
+					font-weight 300
+					background rgba(azul, .75)
+					cursor pointer
+					transition all 500ms
+					&:hover
+						background azul
+					img
+						display none	
 		.login
 		nav
 			width 80%
@@ -329,6 +372,13 @@ p
 			@media screen and (min-width: 1024px)
 				display inline-block
 				float right
+				background none
+				width auto
+				position absolute
+				top 0
+				height 90px
+				left 200px
+				padding 0
 			.login-options
 				text-align center
 				a
@@ -343,6 +393,11 @@ p
 				border-bottom 1px solid rgba(negro, .25)
 				position relative
 				clear both
+				@media screen and (min-width: 1024px)
+					position absolute
+					right 150px
+					padding 28px 0
+					border none
 				input
 					size(92%, 45px) 
 					border-radius 5px
@@ -351,6 +406,15 @@ p
 					font-size em(14px)
 					font-weight 300
 					padding-left 10px
+					transition background 500ms
+					&:focus
+						border none
+						outline none
+						background rgba(negro_2, .90)
+					@media screen and (min-width: 1024px)
+						background rgba(negro_2, .50)
+						width 250px
+						height 35px
 				&:after
 					content ''
 					position absolute
@@ -361,6 +425,9 @@ p
 					background url('/svg/search.svg')
 					background-repeat no-repeat
 					background-size 16px
+					@media screen and (min-width: 1024px)
+						top 35px
+						right 10px
 			ul
 				width 100%
 				z-index 60
@@ -374,7 +441,9 @@ p
 					position relative
 					@media screen and (min-width: 1024px)
 						display inline-block
-						width 175px
+						width auto
+						margin-left 3em
+						text-align center
 					a
 						color white
 						font-size .9em
@@ -382,6 +451,8 @@ p
 						display block
 						font-weight 300
 						font-family 'Roboto', sans-serif
+						@media screen and (min-width: 1024px)
+							line-height 90px
 						svg
 							fill azul
 							size(15px)
@@ -401,15 +472,20 @@ p
 						background border-color
 						@media screen and (min-width: 1024px)
 							position absolute
+							width auto
 							background gris
 							box-shadow 0px 0px 5px rgba(negro_2, .50)
 							li
 								width 250px
 								text-align left
+								@media screen and (min-width: 1024px)
+									margin 0
 								a
 									color negro_2
 									display block
 									padding-left 1em
+									@media screen and (min-width: 1024px)
+										line-height 48px
 									&:hover
 										background negro_2
 										color white
