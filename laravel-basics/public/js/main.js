@@ -223,17 +223,17 @@ $('#profile-photo').click(function(){
 
 $('#login-button').click(function(){
   $('.overlay').show();
-  $('.login').toggleClass('animated slideInDown');
-  $('.login').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    $('.login').removeClass('slideInDown');
+  $('.login-form').toggleClass('animated slideInDown');
+  $('.login-form').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    $('.login-form').removeClass('slideInDown');
   });
 });
 
 
 $('.close-login').click(function(){
-  $('.login').addClass('animated slideOutUp');
-    $('.login').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    $('.login').removeClass('slideOutUp');
+  $('.login-form').addClass('animated slideOutUp');
+    $('.login-form').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    $('.login-form').removeClass('slideOutUp');
     $('.overlay').hide();
   });
 });
