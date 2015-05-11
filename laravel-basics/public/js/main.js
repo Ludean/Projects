@@ -197,7 +197,6 @@ $('#carousel').slick({
 
 $('.mobile-menu').click(function(){
   var navClase = $('nav');
-  $('body').toggleClass('overflow');
   $(this).toggleClass('active');
   // si tiene slidein usar slideout
   $('nav').toggleClass('mostrar-menu');
@@ -212,15 +211,31 @@ $('.mobile-menu').click(function(){
 });
 
 
-$('.login-menu-button').click(function(){
+$('#profile-photo').click(function(){
   var navClase = $('.login');
-  $('body').toggleClass('overflow');
   // si tiene slidein usar slideout
   $('.login').toggleClass('mostrar-menu');
   $('.login').addClass('slideInLeft');
   $('nav').removeClass('mostrar-menu');
   $('.mobile-menu').removeClass('active');
   $(".menu-icon use").attr('xlink:href', '#menu');
+});
+
+$('#login-button').click(function(){
+  $('.overlay').show();
+  $('.login').toggleClass('animated slideInDown');
+  $('.login').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    $('.login').removeClass('slideInDown');
+  });
+});
+
+
+$('.close-login').click(function(){
+  $('.login').addClass('animated slideOutUp');
+    $('.login').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    $('.login').removeClass('slideOutUp');
+    $('.overlay').hide();
+  });
 });
 
 /* ===============

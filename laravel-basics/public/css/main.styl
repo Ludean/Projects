@@ -97,7 +97,7 @@ p
    =============== */
 
 .overlay
-	position absolute
+	position fixed
 	display none
 	size(100%)
 	background rgba(black, .25)
@@ -107,6 +107,7 @@ p
 	.login
 		width 90%
 		height auto
+		animation-duration 500ms
 		background white
 		position relative
 		margin auto
@@ -114,6 +115,16 @@ p
 		padding 1em
 		text-align center
 		box-shadow 0px 0px 5px rgba(negro, .50)
+		.close-login
+			size(25px)
+			background azul
+			position absolute
+			top 0
+			right 0
+			fill white
+			text-align center
+			svg
+				size(100%)
 		h2
 			font-size em(20px)
 			text-align center
@@ -122,7 +133,7 @@ p
 			font-size 3vw
 			margin-bottom 10px
 		.btn
-			width 80%
+			width 85%
 			line-height 45px
 			margin auto
 			margin-bottom 5px
@@ -130,12 +141,26 @@ p
 			display block
 			background red
 			border-radius 3px
+			position relative
+			font-size em(14px)
+			text-align right
+			padding-right 1em
+			svg
+				size(30px)
+				top 8px
+				fill white
+				position absolute
+				left 0px
 		.facebook-login
 			background #46619c
 			color white
 		.google-login
 			background white
 			border 1px solid #a3a2a3
+			color negro
+			svg
+				fill #d62d20
+				left 5px
 		hr
 			width 90%
 			background rgba(#a3a2a3, .25)
@@ -145,11 +170,14 @@ p
 			width 90%
 			margin auto
 		input[type="text"]
+		input[type="password"]
 			size(90%, 40px)
 			margin-bottom 5px
 			border-radius 3px
 			padding-left 5px
 			border 1px solid #a3a2a3
+		input[type="password"]
+			margin-bottom 1em
 		span
 			font-size em(10px)
 			color #a3a2a3
@@ -200,7 +228,7 @@ p
 	color white
 	font-family 'Roboto Condensed', sans-serif
 	z-index 500
-	position relative
+	position fixed
 	clearfix()
 	@media screen and (min-width: 1024px)
 		top 0
