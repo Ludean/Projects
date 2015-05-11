@@ -181,7 +181,7 @@
                 <!-- LOGIN FORM -->
                 {{  Form::open(array('action'=>'', 'method' => 'post')) }}  
                     {{ Form::text('mail', 'Correo Electronicol') }}
-                    <input type="password" name="password" placeholder="Contraseña">
+                    {{ Form::password('password');}}
                     <div class="login-wrapper">
                         <a href="" class="contraseña">Olvidé la contraseña</a>
                         <label for="recordarme">Recordarme</label>
