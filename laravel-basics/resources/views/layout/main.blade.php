@@ -179,8 +179,8 @@
 
 
                 <!-- LOGIN FORM -->
-                <form action="">
-                    <input type="text" name="mail" placeholder="Correo electrónico">
+                {{  Form::open(array('action'=>'', 'method' => 'post')) }}  
+                    {{ Form::text('mail', 'Correo Electronicol') }}
                     <input type="password" name="password" placeholder="Contraseña">
                     <div class="login-wrapper">
                         <a href="" class="contraseña">Olvidé la contraseña</a>
@@ -188,7 +188,7 @@
                         <input type="checkbox" name="remember" id="recordarme">
                     </div>
                     <button>Iniciar sesión</button>
-                </form>
+                {{  Form::close()  }}  
 
                 <hr>
                 <h2 class="cuenta">No tienes una cuenta?</h2>
