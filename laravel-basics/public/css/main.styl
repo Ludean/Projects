@@ -98,6 +98,7 @@ p
 
 .overlay
 	position absolute
+	display none
 	size(100%)
 	background rgba(black, .25)
 	top 0
@@ -211,9 +212,10 @@ p
 			max-width 1280px
 			margin auto
 		figure
-			height 48px
+			size(100%, 48px)
 			line-height 48px
 			display inline-block
+			text-align center
 			img
 				vertical-align middle
 				padding-left em(5px)
@@ -222,49 +224,83 @@ p
 			display inline-block
 			position absolute
 			right 0
-			transition all 500ms
+			top 0
 			.menu-icon
 				position relative
 				top 9px
 			@media screen and (min-width: 1024px)
 				display none
+		.login-menu-button
+			circle(48px)
+			position absolute
+			top 0
+			left 0
+			img
+				width 100%
+				padding 7px
+		.login
 		nav
-			right 0
-			top 48px
-			clearfix()
 			width 80%
-			height  100%
+			height  auto
 			position fixed
 			background negro_2
+			top 48px
+			padding-bottom 1.5em
+		.login
+			left 0
+			animation-duration: 500ms;
+			display none
+			.user-name
+				clearfix()
+				border-bottom 1px solid rgba(negro, .25)
+				padding 1em
+				span
+					font-size em(20px)
+					float left
+				a
+					color azul
+					float right
+			.user-nav
+				padding 0em 1em
+				ul
+					li
+						width 92%
+						text-align left
+						display block
+						position relative
+						clear both
+						a
+							color white
+							font-size .9em
+							line-height 40px
+							display block
+							font-weight 300
+							font-family 'Roboto', sans-serif
+							span
+								background azul
+								circle(20px)
+								display inline-block
+								vertical-align middle
+								line-height 20px
+								text-align center
+								font-size em(12px)
+								//margin-top -3px
+			.btn
+				size(200px, 40px)
+				background azul
+				margin 1em auto 0em
+				display block
+				color white
+				text-align center
+				line-height 40px
+				border-radius 1px
+		nav
+			right 0
 			display none
 			animation-duration: 500ms;
 			@media screen and (min-width: 1024px)
 				display inline-block
 				float right
-			.user-login
-				.user-photo
-					margin em(10px)
-					clearfix()
-					float right
-					circle(60px)
-					overflow hidden
-					border 3px solid rgba(negro, .75)
-					img
-						width 100%
-				.user-name
-					float right
-					margin-top 1.3em
-					text-align right
-					span
-						display block
-						font-size em(20px)
-					a
-						color azul
-						font-weight 300
-						font-size em(14px)
-						margin-left 10px
-						margin-top 5px
-						display inline-block
 			.login-options
 				text-align center
 				a
@@ -275,7 +311,7 @@ p
 					display inline-block
 			.search-box
 				text-align center
-				padding-bottom em(10px)
+				padding 1em 0em
 				border-bottom 1px solid rgba(negro, .25)
 				position relative
 				clear both
@@ -291,7 +327,7 @@ p
 					content ''
 					position absolute
 					right 8%
-					top 14.5px
+					top 30px
 					size(16px)
 					display block
 					background url('/svg/search.svg')
@@ -313,9 +349,11 @@ p
 						width 175px
 					a
 						color white
-						font-size 1em
+						font-size .9em
 						line-height 48px
 						display block
+						font-weight 300
+						font-family 'Roboto', sans-serif
 						svg
 							fill azul
 							size(15px)

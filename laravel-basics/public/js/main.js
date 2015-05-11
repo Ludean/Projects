@@ -200,16 +200,28 @@ $('.mobile-menu').click(function(){
   $('body').toggleClass('overflow');
   $(this).toggleClass('active');
   // si tiene slidein usar slideout
-  $(this).next('nav').toggleClass('mostrar-menu');
-  $(this).next('nav').toggleClass('slideInRight slideInOut');
+  $('nav').toggleClass('mostrar-menu');
+  $('nav').addClass('slideInRight');
   var menuIcon = $(".menu-icon use").attr('xlink:href');
   if( menuIcon == '#menu') {
     $(".menu-icon use").attr('xlink:href', '#close');
   } else {
     $(".menu-icon use").attr('xlink:href', '#menu');
   }
+  $('.login').removeClass('mostrar-menu');
 });
 
+
+$('.login-menu-button').click(function(){
+  var navClase = $('.login');
+  $('body').toggleClass('overflow');
+  // si tiene slidein usar slideout
+  $('.login').toggleClass('mostrar-menu');
+  $('.login').addClass('slideInLeft');
+  $('nav').removeClass('mostrar-menu');
+  $('.mobile-menu').removeClass('active');
+  $(".menu-icon use").attr('xlink:href', '#menu');
+});
 
 /* ===============
    RANGE SLIDER

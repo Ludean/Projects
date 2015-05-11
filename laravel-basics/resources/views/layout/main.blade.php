@@ -61,40 +61,45 @@
                
         <div class="top-nav">
             <header>
+
                 <figure>
                     <img src="img/logo.svg" alt="Emprendox">
                 </figure>
+
                 <div class="mobile-menu center-text">
                     <svg class="menu-icon">
                         <use class="lol" xlink:href="#menu" />
                     </svg>
                 </div>
+
+                <div class="login-menu-button">
+                    <div class="profile-photo">
+                        <img src="/svg/photo-default.svg" alt="">
+                    </div>
+                </div>
+                
+                <div class="login animated">
+                    <div class="user-name">
+                        <span>Diana Benedictis</span>
+                        <a href="">SALIR</a>
+                    </div>
+                    <div class="user-nav">
+                        <ul>
+                            <li><a href="">PERFIL</a></li>
+                            <li><a href="">MENSAJES
+                            <span>2</span>
+                            </a></li>
+                            <li><a href="">MIS ANUNCIOS</a></li>
+                            <li><a href="">FAVORITOS</a></li>
+                            <li><a href="">ALERTAS</a></li>
+                        </ul>
+                    </div>
+                    <a href="" class="btn publicar-anuncio">Publica tu anuncio</a>
+                </div>
+
                 <nav class="animated">
 
-                     <!-- IF USER LOGED 
-
-                    <div class="user-login">
-                        <div class="user-photo">
-                            <img src="/img/diana.jpg" alt="">
-                        </div>
-                        <div class="user-name">
-                            <span>Diana Benedictis</span>
-                            <a href="">EDITAR</a>
-                            <a href="">SALIR</a>
-                        </div>
-                    </div>
-
-                    -->
-
-                    <!-- IF USER IS NOT LOGED -->
-
-                    <div class="login-options">
-                        <a href="">INICIAR SESION</a>
-                        <a href="">REGISTRARSE</a>
-                    </div>
-                    
                     <!-- SERCH INPUT -->
-
                     <div class="search-box">
                         <input type="text" placeholder="buscar aquí">
                     </div>
