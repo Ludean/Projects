@@ -14,10 +14,10 @@
 /*Route::get('/', 'WelcomeController@index');*/
 /*Route::get('/', 'WelcomeController@index');*/
 Route::get('/', 'WelcomeController@index');
-Route::get('/inicio', 'WelcomeController@index');
-Route::get('/salir', 'UsersController@logout');
-Route::get('home', 'HomeController@index');
-Route::get('users', 'UsersController@login');
+Route::get('inicio', 'WelcomeController@index');
+//Route::get('/salir', 'UsersController@logout');
+//Route::get('home', 'HomeController@index');
+//Route::get('users', 'UsersController@login');
 /*Route::get('test', function()
 	{
 		return View::make('test',array('name'=>'Luis'));
