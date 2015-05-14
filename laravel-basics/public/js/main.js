@@ -213,12 +213,18 @@ $('.mobile-menu').click(function(){
 
 $('#profile-photo').click(function(){
   var navClase = $('.login');
+  var size = $(window).width();
   // si tiene slidein usar slideout
-  $('.login').toggleClass('mostrar-menu');
-  $('.login').addClass('slideInLeft');
-  $('nav').removeClass('mostrar-menu');
-  $('.mobile-menu').removeClass('active');
-  $(".menu-icon use").attr('xlink:href', '#menu');
+  if (size<1024) {
+    $('.login').toggleClass('mostrar-menu');
+    $('.login').addClass('slideInLeft');
+    $('.login').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+     $('.login').removeClass('slideInLeft');
+    });
+    $('nav').removeClass('mostrar-menu');
+    $('.mobile-menu').removeClass('active');
+    $(".menu-icon use").attr('xlink:href', '#menu');
+  };
 });
 
 $('#login-button').click(function(){
@@ -237,6 +243,40 @@ $('.close-login').click(function(){
     $('.overlay').hide();
   });
 });
+
+
+// WINDOW RESIZE
+
+$(window).resize(function(){
+  var size = $(window).width();
+  if (size>1024) {
+    $('.login').removeClass('mostrar-menu');
+  };
+});
+
+
+
+// HOVER MENU DESKTOP
+
+$( ".login-menu-button" )
+  .mouseenter(function() {
+    var size = $(window).width();
+    if (size>1024) {
+      $('.login').css('display', 'block');
+    };
+  })
+  .mouseleave(function() {
+    $('.login').css('display', 'none');
+  });
+
+  $( ".login" )
+  .mouseenter(function() {
+    $('.login').css('display', 'block');
+  })
+  .mouseleave(function() {
+    $('.login').css('display', 'none');
+  });
+
 
 /* ===============
    RANGE SLIDER

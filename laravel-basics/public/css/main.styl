@@ -116,7 +116,9 @@ p
 		text-align center
 		box-shadow 0px 0px 5px rgba(negro, .50)
 		@media screen and (min-width: 1024px)
-			size(600px, 400px)
+			size(600px, auto)
+			padding 30px
+			text-align left
 		.close-login
 			size(25px)
 			background azul
@@ -125,9 +127,10 @@ p
 			right 0
 			fill white
 			text-align center
+			cursor pointer
 			@media screen and (min-width: 1024px)
-				size(45px)
-				line-height 45px
+				size(40px)
+				line-height 40px
 			svg
 				size(100%)
 				@media screen and (min-width: 1024px)
@@ -137,21 +140,21 @@ p
 			font-size em(20px)
 			text-align center
 			margin-bottom 10px
+			font-weight 300
 			@media screen and (min-width: 1024px)
 				font-size em(30px)
-				font-weight 300
-				text-align left
+				margin-bottom 15px
 		p
 			font-size 3vw
 			margin-bottom 10px
 			@media screen and (min-width: 1024px)
 				font-size 1em
-				font-weight 300px
-				text-align left
+				font-weight 300
 				color negro_2
+				text-align center
+				margin-bottom 25px
 		.btn-wrapper
 			@media screen and (min-width: 1024px)
-				width 48%
 				display inline-block
 				vertical-align top
 				margin-right 5px
@@ -165,28 +168,34 @@ p
 			background red
 			border-radius 3px
 			position relative
-			font-size em(14px)
+			font-size em(12px)
 			text-align right
 			padding-right 1em
+			font-weight 300
+			font-family 'Roboto', sans-serif
 			@media screen and (min-width: 1024px)
-				width 100%
-				margin-bottom 10px
+				width 250px
+				margin-bottom 12px
+				text-align center
+				padding-left 40px
+				height 50px
+				font-size 1em
+				line-height 50px
 			svg
-				size(30px)
-				top 8px
+				size(20px)
+				top 15px
 				fill white
 				position absolute
-				left 0px
+				left 15px
 		.facebook-login
 			background #46619c
 			color white
 		.google-login
 			background white
-			border 1px solid #a3a2a3
+			border 1px solid rgba(border-color, .50)
 			color negro
 			svg
 				fill #d62d20
-				left 5px
 		hr
 			width 90%
 			background rgba(#a3a2a3, .25)
@@ -196,24 +205,29 @@ p
 				display none
 		form
 			@media screen and (min-width: 1024px)
-				width 48%
+				width 50%
 				display inline-block
 				vertical-align top
 				margin-left 10px
+				text-align center
 		.login-wrapper
 			width 90%
 			margin auto
+			@media screen and (min-width: 1024px)
+				width 100%
 		input[type="text"]
 		input[type="password"]
 			size(90%, 40px)
 			margin-bottom 5px
 			border-radius 3px
 			padding-left 5px
-			border 1px solid #a3a2a3
+			font-family 'Roboto', sans-serif
+			font-weight 300
+			border 1px solid rgba(border-color, .50)
 			@media screen and (min-width: 1024px)
-				height 45px
-				width 100%
-				margin-bottom 10px
+				height 50px
+				width 275px
+				margin-bottom 12px
 		input[type="password"]
 			margin-bottom 1em
 		span
@@ -225,9 +239,10 @@ p
 			margin-bottom 5px
 		.contraseña
 			text-decoration underline
-			font-size em(12px)
+			font-size em(14px)
 			font-weight 300
 			color negro
+			font-family 'Roboto', sans-serif
 			float left
 		input[type="checkbox"]
 			circle(12px)
@@ -237,22 +252,40 @@ p
 			font-size em(12px)
 			float right
 			margin-left 5px
+			font-family 'Roboto', sans-serif
+			font-weight 300
+			font-size em(12px)
+			color border-color
 		button
 			border-radius 3px
 			background azul
 			color white
 			margin 10px auto 0px
-			width 200px
-			height 40px
+			width 100%
+			height 34px
+			line-height 34px
 			border none
+			font-family 'Roboto', sans-serif
+			font-weight 300
+			position relative
 		.cuenta
 			margin-bottom 0px
 			@media screen and (min-width: 1024px)
-				text-align center
-				margin-top 1em
+				//text-align center
+				//margin-top 1em
+				//margin-top -80px
+				//float left
+				//font-size em(25px)
+				//width 250px
+				display none
 		.login-link
 			color azul 
+			text-align center
 			font-size em(14px)
+			@media screen and (min-width: 1024px)
+				//margin-top -40px
+				//width 250px
+				display none
 /* ===============
    HEADER
    =============== */
@@ -320,10 +353,9 @@ p
 			overflow hidden
 			@media screen and (min-width: 1024px)
 				right 0
-				top 25px
 				left auto
 				z-index 500
-				size(auto)
+				size(250px, 90px)
 				border-radius 0
 			#profile-photo
 			#login-button
@@ -332,24 +364,47 @@ p
 					height auto
 					padding 7px
 			#profile-photo
+				circle(40px)
+				overflow hidden
+				margin-top 4px
+				margin-left 4px
+				img
+					padding 0
 				@media screen and (min-width: 1024px)
-					circle(50px)
+					circle(65px)
+					margin-top 12px
+					border 2px solid azul
+					margin-left 0
+					float right
+					img
+						width 100%
+						padding 0
 			#login-button
+			#sign-up-button
 				circle(48px)
 				@media screen and (min-width: 1024px)
 					size(110px, 40px)
-					border-radius 5px
+					border-radius 3px
 					text-align center
 					line-height 40px
 					font-size em(14px)
 					font-weight 300
-					background rgba(azul, .75)
+					background azul
 					cursor pointer
 					transition all 500ms
+					margin-top 28px
+					display inline-block
 					&:hover
-						background azul
+						background rgba(azul, .90)
 					img
-						display none	
+						display none
+			#sign-up-button
+				display none
+				a
+					color white
+					display block
+				@media screen and (min-width: 1024px)
+					display inline-block	
 		.login
 		nav
 			width 80%
@@ -361,7 +416,23 @@ p
 		.login
 			left 0
 			animation-duration: 500ms;
-			display none
+			//display none
+			z-index 500
+			@media screen and (min-width: 1024px)
+				position absolute
+				left auto
+				right 0
+				box-shadow 0px 1px 5px rgba(negro, .75)
+				size(275px, auto)
+				top 85px
+				border-radius 3px
+				&:before
+					content ''
+					triangle(up, 20px, negro_2)
+					display block
+					top -10px
+					right 22px
+					position absolute
 			.user-name
 				clearfix()
 				border-bottom 1px solid rgba(negro, .25)
@@ -373,14 +444,16 @@ p
 					color azul
 					float right
 			.user-nav
-				padding 0em 1em
 				ul
 					li
-						width 92%
+						width 100%
 						text-align left
 						display block
 						position relative
 						clear both
+						transition background 250ms
+						&:hover
+							background rgba(border-color, .20)
 						a
 							color white
 							font-size .9em
@@ -388,15 +461,50 @@ p
 							display block
 							font-weight 300
 							font-family 'Roboto', sans-serif
-							span
-								background azul
-								circle(20px)
-								display inline-block
-								vertical-align middle
-								line-height 20px
-								text-align center
-								font-size em(12px)
-								//margin-top -3px
+							padding-left 25px
+							padding 0em 1em 0em 3em
+						&:before
+							content ''
+							size(16px)
+							position absolute
+							top 12px
+							left 1em
+						&:nth-child(1)		
+							&:before
+								background url('/svg/perfil.svg')
+								background-repeat no-repeat
+								background-size contain
+						&:nth-child(2)		
+							&:before
+								background url('/svg/mensajes.svg')
+								background-repeat no-repeat
+								background-size contain
+						&:nth-child(3)		
+							&:before
+								background url('/svg/anuncios.svg')
+								background-repeat no-repeat
+								background-size contain
+						&:nth-child(4)		
+							&:before
+								background url('/svg/favoritos.svg')
+								background-repeat no-repeat
+								background-size contain
+						&:nth-child(5)		
+							&:before
+								background url('/svg/alertas.svg')
+								background-repeat no-repeat
+								background-size contain
+						span
+							background azul
+							circle(20px)
+							display inline-block
+							vertical-align middle
+							line-height 20px
+							text-align center
+							float right
+							margin-top 10px
+							font-size em(12px)
+							//margin-top -3px
 			.btn
 				size(200px, 40px)
 				background azul
@@ -436,7 +544,7 @@ p
 				clear both
 				@media screen and (min-width: 1024px)
 					position absolute
-					right 150px
+					right 250px
 					padding 28px 0
 					border none
 				input
@@ -451,10 +559,10 @@ p
 					&:focus
 						border none
 						outline none
-						background rgba(negro_2, .90)
+						background rgba(negro, .90)
 					@media screen and (min-width: 1024px)
 						background rgba(negro_2, .50)
-						width 250px
+						width 200px
 						height 35px
 				&:after
 					content ''

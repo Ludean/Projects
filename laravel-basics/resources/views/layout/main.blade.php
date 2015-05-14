@@ -78,19 +78,23 @@
 
                 <div class="login-menu-button">
 
-                    <!-- SI EL USUARIO ESTA LOGEADO 
+                    <!-- SI EL USUARIO ESTA LOGEADO -->
 
                     <div id="profile-photo">
-                        <img src="/svg/photo-default.svg" alt="">
+                        <img src="/img/avatar.jpg" alt="">
                     </div>
                     
-                    -->
 
-                    <!-- SI EL USUARIO NO ESTA LOGEADO  -->
+                    <!-- SI EL USUARIO NO ESTA LOGEADO 
                     <div id="login-button">
                         <img src="/svg/photo-default.svg" alt="">
                         <p>Iniciar sesión</p>
                     </div>
+                    <div id="sign-up-button">
+                        <a href="">Registrarse</a>
+                    </div>
+
+                     -->
 
                 </div>
                 
@@ -122,11 +126,11 @@
 
                 <nav class="animated">
 
-                    <!-- SERCH INPUT -->
+                    <!-- SERCH INPUT 
                     <div class="search-box">
                         <input type="text" placeholder="buscar aquí">
                     </div>
-
+                    -->
 
                     <!-- MENU GENERAL -->
                     <ul>
