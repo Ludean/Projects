@@ -13,9 +13,9 @@ class UsersController extends Controller {
 
 	public function login()
 	{
-		$username= Input::get('name');
+		//$username= Input::get('mail');
 		//return view('index');
-		return view::make('hello',$username);
+		//return View::make('hello');
 	}
 	public function logout()
 	{

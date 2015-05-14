@@ -183,17 +183,18 @@
 
 
                 <!-- LOGIN FORM -->
-                {{  Form::open(array('action'=>'', 'method' => 'post')) }}  
-                    {{ Form::text('mail', 'Correo Electronicol') }}
-                    {{ Form::password('password');}}
+                
+                {{Form::open(array('action'=>'UsersController@login', 'method' => ''))}}  
+                    {{Form::text('mail', 'Correo Electronico')}}
+                    {{Form::password('password')}}
                     <div class="login-wrapper">
-                        <a href="" class="contraseña">Olvidé la contraseña</a>
-                        <label for="recordarme">Recordarme</label>
+                        <a href="" class="contraseña">Olvidé contraseñ</a>
+                        <label for="recordarme">Recordame</label>
                         <input type="checkbox" name="remember" id="recordarme">
                     </div>
                     <button>Iniciar sesión</button>
-                {{  Form::close()  }}  
-
+                {{Form::close()}}
+              
                 <hr>
                 <h2 class="cuenta">No tienes una cuenta?</h2>
                 <a class="login-link" href="">Regístrate</a>

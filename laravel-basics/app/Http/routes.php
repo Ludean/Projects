@@ -15,6 +15,7 @@
 /*Route::get('/', 'WelcomeController@index');*/
 Route::get('/', 'WelcomeController@index');
 Route::get('/inicio', 'WelcomeController@index');
+Route::get('/salir', 'UsersController@logout');
 Route::get('home', 'HomeController@index');
 Route::get('users', 'UsersController@login');
 /*Route::get('test', function()
@@ -23,16 +24,16 @@ Route::get('users', 'UsersController@login');
 	});
 */
 //Route::get('/test','testcontroller@index');
-//Route::get('/db',function()
-	//{
-	  /*DB::table('odot')->insert(
-        array('name'=>'Hola :3')
-	  	);*/
+Route::get('/db',function()
+	{
+	  //DB::table('odot')->insert(
+        //array('name'=>'Hola :3')
+	  	//);*/
       //return DB::table('odot')->get();
-     // $result= DB::table('odot')->where('idodot',2)->first();
-      //var_dump($result);
-      //return $result->name;
-	//});
+      $result= DB::table('odot')->where('idodot',2)->first();
+      var_dump($result);
+      return $result->name;
+	});
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
