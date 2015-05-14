@@ -11,7 +11,7 @@
         <!-- GOOGLE FONT -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:500,300,400|Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
 
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
         
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
 
@@ -85,7 +85,7 @@
                     </div>
                     
 
-                    <!-- SI EL USUARIO NO ESTA LOGEADO 
+                    <!-- SI EL USUARIO NO ESTA LOGEADO  -->
                     <div id="login-button">
                         <img src="/svg/photo-default.svg" alt="">
                         <p>Iniciar sesión</p>
@@ -94,7 +94,7 @@
                         <a href="">Registrarse</a>
                     </div>
 
-                     -->
+                    
 
                 </div>
                 
@@ -238,6 +238,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/20140415/jquery.cycle2.min.js"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
 
-        <script src="js/main.min.js"></script>
+        {{ HTML::script('js/main.min.js')}}
     </body>
 </html>
