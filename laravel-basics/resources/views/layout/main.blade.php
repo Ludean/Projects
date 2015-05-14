@@ -184,11 +184,11 @@
 
                 <!-- LOGIN FORM -->
                 
-                {{Form::open(array('action'=>'UsersController@login', 'method' => ''))}}  
+                {{Form::open(array('action'=>'UsersController@login', 'method' => 'post'))}}  
                     {{Form::text('mail', 'Correo Electronico')}}
                     {{Form::password('password')}}
                     <div class="login-wrapper">
-                        <a href="" class="contraseña">Olvidé contraseñ</a>
+                        <a href="" class="contraseña">Olvidé contraseña</a>
                         <label for="recordarme">Recordame</label>
                         <input type="checkbox" name="remember" id="recordarme">
                     </div>
@@ -237,7 +237,6 @@
         <!-- PLUGINS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/20140415/jquery.cycle2.min.js"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
-
-        {{ HTML::script('js/main.min.js')}}
-    </body>
+       
+        </body>
 </html>
