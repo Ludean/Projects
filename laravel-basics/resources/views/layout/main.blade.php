@@ -237,7 +237,6 @@
         <!-- PLUGINS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/20140415/jquery.cycle2.min.js"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
-
-        {{ HTML::script('js/main.min.js')}}
+        <script src="{{ asset('js/main.min.js') }}"></script>
     </body>
 </html>
