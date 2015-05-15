@@ -78,25 +78,27 @@
 
                 <div class="login-menu-button">
 
-                    <!-- SI EL USUARIO ESTA LOGEADO 
+                    <!-- SI EL USUARIO ESTA LOGEADO  -->
 
                     <div id="profile-photo">
-                        <img src="/img/avatar.jpg" alt="">
+                        <div>
+                            <img src="/img/avatar.jpg" alt="">
+                        </div>
                     </div>
+
                     
-                     -->
 
-
-                    <!-- SI EL USUARIO NO ESTA LOGEADO  -->
+                    <!-- SI EL USUARIO NO ESTA LOGEADO   
                     <div id="sign-up-button">
-                        <a href="" class="btn publicar-anuncio">Publica tu anuncio</a>
+                        <a href="" class="btn publicar-anuncio">Publicar anuncio</a>
                     </div>
                     <div id="login-button">
                         <img src="/svg/photo-default.svg" alt="">
                         <p>Iniciar sesión</p>
                     </div>
-
-                   
+                    
+                    -->
+                  
 
                 </div>
                 
@@ -128,12 +130,6 @@
 
                 <nav class="animated">
 
-                    <!-- SERCH INPUT 
-                    <div class="search-box">
-                        <input type="text" placeholder="buscar aquí">
-                    </div>
-                    -->
-
                     <!-- MENU GENERAL -->
                     <ul>
                         <li>
@@ -158,41 +154,22 @@
         </div>
 
         <!-- SLIDER -->
-        <div id="slider-container">
-            <div id="slider"  class="cycle-slideshow" 
-                data-cycle-fx="fadeout" 
-                data-cycle-timeout="0"
-                data-cycle-caption-plugin=caption2
-                data-cycle-overlay=".slider-overlay"
-                data-cycle-overlay-fx-out="slideUp"
-                data-cycle-overlay-fx-in="slideDown"
-                data-cycle-slides="> div"
-                data-cycle-prev="#slider-prev"
-                data-cycle-next="#slider-next"
-            >
-                <div class="slider-item" data-cycle-title="Emprendox" data-cycle-desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">
-                    <img src="img/slider/mcdonalds.jpg" alt="McDonalds" >
-                </div>
-                <div class="slider-item" data-cycle-title="Negocios" data-cycle-desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, unde!">
-                    <img src="img/slider/starbucks.jpg" alt="Starbucks" >
-                </div>
-                <div class="slider-item" data-cycle-title="Franquicias" data-cycle-desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, labore?">
-                    <img src="img/slider/sweetncoffe.jpg" alt="Sweet and Coffe" >
-                </div> 
-            </div>
-            <!-- PREV/NEXT BUTTONS -->
-            <div class="slider-buttons">
-                <div id="slider-prev">
-                    <svg class="slider-button">
-                        <use xlink:href="#prev"></use>
-                    </svg>
-                </div>
-                <div id="slider-next">
-                    <svg class="slider-button">
-                        <use xlink:href="#next"></use>
-                    </svg>               
-                </div>
-            </div>
+        <div id="search-box">
+           <div class="web-container">
+               <!-- SEARCH INPUT -->
+               <div class="search">
+                    <div class="tabs">
+                        <div class="active-tab">Por Negocio</div>
+                        <div>Por Franquicia</div>
+                    </div>
+                    <div class="input-container">
+                        <span class="search-icon">
+                            <svg><use xlink:href="#search" /></svg>
+                        </span>
+                        <input id="search" type="text" placeholder="Negocio, Ciudad, Precio">
+                    </div>
+               </div>
+           </div>
         </div>
 
         <!-- CAROUSEL -->

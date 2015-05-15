@@ -158,8 +158,9 @@ p
 				display inline-block
 				vertical-align top
 				margin-right 5px
+				width 49%
 		.btn
-			width 85%
+			width 80%
 			line-height 45px
 			margin auto
 			margin-bottom 5px
@@ -173,29 +174,37 @@ p
 			padding-right 1em
 			font-weight 300
 			font-family 'Roboto', sans-serif
+			border 1px solid rgba(border-color, .50)
 			@media screen and (min-width: 1024px)
-				width 250px
+				width 100%
 				margin-bottom 12px
-				text-align center
 				padding-left 40px
 				height 50px
-				font-size 1em
 				line-height 50px
+				font-size em(14px)
 			svg
-				size(20px)
-				top 15px
+				size(45px)
+				top -1px
+				border-radius 3px 0px 0px 3px
+				//top 15px
 				fill white
 				position absolute
-				left 15px
+				left 0
+				padding 10px
+				background red
+				@media screen and (min-width: 1024px)
+					size(50px)
 		.facebook-login
-			background #46619c
-			color white
-		.google-login
 			background white
-			border 1px solid rgba(border-color, .50)
 			color negro
 			svg
-				fill #d62d20
+				background #46619c
+		.google-login
+			background white
+			color negro
+			svg
+				fill white
+				background #d62d20
 		hr
 			width 90%
 			background rgba(#a3a2a3, .25)
@@ -205,10 +214,9 @@ p
 				display none
 		form
 			@media screen and (min-width: 1024px)
-				width 50%
+				width 49%
 				display inline-block
 				vertical-align top
-				margin-left 10px
 				text-align center
 		.login-wrapper
 			width 90%
@@ -226,7 +234,7 @@ p
 			border 1px solid rgba(border-color, .50)
 			@media screen and (min-width: 1024px)
 				height 50px
-				width 275px
+				width 100%
 				margin-bottom 12px
 		input[type="password"]
 			margin-bottom 1em
@@ -355,7 +363,7 @@ p
 				right 0
 				left auto
 				z-index 500
-				size(250px, 90px)
+				size(270px, 90px)
 				border-radius 0
 			#profile-photo
 			#login-button
@@ -364,27 +372,29 @@ p
 					height auto
 					padding 7px
 			#profile-photo
-				circle(40px)
-				overflow hidden
-				margin-top 4px
-				margin-left 4px
-				img
-					padding 0
-				@media screen and (min-width: 1024px)
-					circle(65px)
-					margin-top 12px
-					border 2px solid azul
-					margin-left 0
-					float right
+				size(250px, 90px)
+				div
+					circle(35px)
+					overflow hidden
+					margin-top 6px
+					margin-left 6px
 					img
-						width 100%
 						padding 0
+					@media screen and (min-width: 1024px)
+						circle(65px)
+						margin-top 12px
+						border 2px solid azul
+						margin-left 0
+						float right
+						img
+							width 100%
+							padding 0
 			#login-button
 			#sign-up-button
 				circle(48px)
 				@media screen and (min-width: 1024px)
 					size(110px, 40px)
-					border-radius 3px
+					border-radius 2px
 					text-align center
 					line-height 40px
 					font-size em(14px)
@@ -426,6 +436,7 @@ p
 				size(275px, auto)
 				top 85px
 				border-radius 3px
+				padding-bottom 0
 				&:before
 					content ''
 					triangle(up, 20px, negro_2)
@@ -463,6 +474,8 @@ p
 							font-family 'Roboto', sans-serif
 							padding-left 25px
 							padding 0em 1em 0em 3em
+							@media screen and (min-width: 1024px)
+								line-height 45px
 						&:before
 							content ''
 							size(16px)
@@ -514,6 +527,8 @@ p
 				text-align center
 				line-height 40px
 				border-radius 1px
+				@media screen and (min-width: 1024px)
+					display none
 		nav
 			right 0
 			display none
@@ -536,47 +551,6 @@ p
 					line-height 40px
 					font-size em(14px)
 					display inline-block
-			.search-box
-				text-align center
-				padding 1em 0em
-				border-bottom 1px solid rgba(negro, .25)
-				position relative
-				clear both
-				@media screen and (min-width: 1024px)
-					position absolute
-					right 250px
-					padding 28px 0
-					border none
-				input
-					size(92%, 45px) 
-					border-radius 5px
-					background rgba(negro, .50)
-					border none
-					font-size em(14px)
-					font-weight 300
-					padding-left 10px
-					transition background 500ms
-					&:focus
-						border none
-						outline none
-						background rgba(negro, .90)
-					@media screen and (min-width: 1024px)
-						background rgba(negro_2, .50)
-						width 200px
-						height 35px
-				&:after
-					content ''
-					position absolute
-					right 8%
-					top 30px
-					size(16px)
-					display block
-					background url('/svg/search.svg')
-					background-repeat no-repeat
-					background-size 16px
-					@media screen and (min-width: 1024px)
-						top 35px
-						right 10px
 			ul
 				width 100%
 				z-index 60
@@ -640,86 +614,79 @@ p
 										color white
 
 /* ===============
-   SLIDER
+   SEARCH BOX
    =============== */
    
-#slider-container
+#search-box
+	background url('/img/panorama.jpg')
+	width 100%
+	height 500px
+	background-size cover
+	background-repeat no-repeat
+	margin-top 48px
 	position relative
 	@media screen and (min-width: 1024px)
-		top 48px
-	#slider
-		size(100%, 350px)
-		z-index 10
+		margin-top 90px
+		height 700px
+	.web-container
+		height 100%
 		position relative
+	.tabs
+		max-width 720px
+		margin 0 auto 5px
+		text-align center
 		@media screen and (min-width: 1024px)
-			height 500px
-		.slider-item
-			overflow hidden
-			size(100%)
-			img
-				width auto 
-				height 350px
-				@media screen and (min-width: 1024px)
-					width 100%
-					height auto
-			&:after
-				content ''
-				position absolute
-				top 0
-				left 0
-				size(100%)
-				background rgba(negro, .25)
-				
-	.slider-buttons
-		width 100%
-		position absolute
-		top 50%
-		margin-top -50px
-		z-index 10
-		padding 0 .5em 0 .5em
-		@media screen and (min-width: 1024px)
-			top 265px
-		.slider-button
-			background rgba(gris, .75)
-			circle(48px)
-			fill negro_2
-			padding em(10px)
-			position relative
-			box-shadow 0px 0px 5px rgba(negro_2, .25)
-		#slider-prev
-		#slider-next
+			text-align left
+		div
+			size(49.2%, 50px)
 			display inline-block
-			z-index 30
+			line-height 50px
+			background rgba(negro, .50)
+			color white
+			text-align center
 			cursor pointer
-		#slider-next
-			float right
-
-.cycle-overlay
-	position absolute
-	bottom 1em
-	z-index 10
-	right 0
-	text-align center
-	@media screen and (min-width: 1024px)
-		text-align right
-		right 1em
-	div:first-child
-		font-size 3em
-		color white
-		font-family 'Roboto Condensed', sans-serif
-		font-weight 700
-		text-shadow 0px 0px 10px negro
-	div:last-child
-		color white
-		font-family 'Roboto', sans-serif
-		font-weight 300
-		padding em(5px)
-		margin em(5px)
-		background rgba(negro, .75)
+			@media screen and (min-width: 1024px)
+				size(150px, 50px)	
+	.search
+		position absolute
+		top 40%
+		margin-top -100px
+		width 100%
+		text-align center
+		padding 0em 1em
 		@media screen and (min-width: 1024px)
-			font-size 1em
-			padding 1em
-	
+			top 50%
+			padding 0
+		.input-container
+			width 100%
+			max-width 720px
+			margin auto
+			position relative
+			.search-icon
+				size(50px)
+				display block
+				z-index 200
+				position absolute
+				right 0
+				line-height 50px
+				text-align center
+				svg
+					size(15px)
+					vertical-align middle
+					fill azul
+		input
+			height 50px
+			width 100%
+			border 0
+			box-shadow 0px 1px 5px rgba(negro, .15)
+			font-family 'Roboto Condensed', sans-serif
+			font-weight 300
+			background rgba(white, .90)
+			font-size 1rem
+			padding-left em(10px)
+		
+	.active-tab
+		background rgba(negro, .80) !important
 	
 /* ===============
    CAROUSEL 
