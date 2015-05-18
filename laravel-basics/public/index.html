@@ -275,8 +275,16 @@
 
                 <!-- LOGIN FORM -->
                 <form action="">
-                    <input type="text" name="mail" placeholder="Correo electrónico">
-                    <input type="password" name="password" placeholder="Contraseña">
+                    <div class="login-error">
+                        <input type="text" name="mail" placeholder="Correo electrónico">
+                        <!-- MOSTRAR SI EL CORREO ES INCORRECTO -->
+                        <span>!</span>
+                    </div>
+                    <div class="login-error">
+                        <input type="password" name="password" placeholder="Contraseña">
+                        <!-- MOSTRAR SI LA CONTRASEÑA ES INCORRECTA -->
+                        <span>!</span>
+                    </div>
                     <div class="login-wrapper">
                         <a href="" class="contraseña">Olvidé la contraseña</a>
                         <label for="recordarme">Recordarme</label>
