@@ -146,27 +146,21 @@ $( "#profile-photo" )
 
 
 
+// TOOLTIP
 
+$('input').focusin(function(){
+    var div = $(this).parent().next('div');
+    var size = $(window).width();
+    if (size>1024) {
+      $(div).show();     
+    };
 
-/* ===============
-   MAIL VALIDATION
-   =============== */
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$('input').focusout(function(){
+    var div = $(this).parent().next('div');
+    $(div).hide();
+});
 
 
 /* ===============

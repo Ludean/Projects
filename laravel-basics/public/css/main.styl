@@ -78,6 +78,7 @@ li
 	margin auto
 	clearfix()
 	
+	
 /* ===============
    TIPOGRAFIA 
    =============== */
@@ -780,15 +781,13 @@ p
 					line-height 50px
 		.tooltip
 			position absolute
-			display none
-			right 2em
+			right 1em
 			top 0
+			display none
 			size(235px, auto)
 			padding 0em em(30px)
 			border 1px solid rgba(border-color, .25)
 			box-shadow 0px 1px 1px rgba(negro, .10)
-			@media screen and (min-width: 1024px)
-				display block
 			h3
 				font-weight 400
 				margin 1em 0
@@ -1112,40 +1111,101 @@ p
    =============== */
    
 footer
-	@media print
-		display none
 	background negro
-	overflow auto
+	font-family 'Roboto', sans-serif
+	padding 1em 0 0
 	text-align center
-	color white
-	margin .5em 0em 0em
-	img
-		width 150px
-		height auto
-		margin 1em 0em .5em
-	span
-		display block
-		font-size em(14px)
-		padding 0 em(10px)
-		margin-bottom .5em
-		font-family 'Roboto', sans-serif
-		font-weight 100
-	.footer-icons
-		svg
+	@media screen and (min-width: 1024px)
+		padding 2em 0em 0
+	.footer-nav
+	.footer-media
+	.emprendox-footer
+		margin-bottom 20px
+		@media screen and (min-width: 1024px)
+			margin-bottom 0
+	.footer-nav
+		overflow auto
+		@media screen and (min-width: 1024px)
 			display inline-block
-			size(25px)
-			fill white
-			margin em(10px)
-			vertical-align middle
-	li
-		display inline-block
-		margin-bottom em(10px)
-		height 20px
+			float left
+			width 60%
+			margin-bottom 1em
+		ul
+			li
+				float left
+				color white
+				width calc(33.333333% - 20px)
+				line-height 35px
+				font-size em(13px)
+				border 1px solid rgba(border-color, .25)
+				border-radius 5px
+				margin 10px
+				font-weight 300
+				font-family 'Roboto Condensed', sans-serif
+				@media screen and (min-width: 1024px)
+					border none
+					border-radius 0
+					font-weight 400
+					width 250px
+					margin 0
+					font-size 1.1em
+					text-align left
+				ul
+					display none
+					@media screen and (min-width: 1024px)
+						display block
+					li
+						display block
+						width 100%
+						font-size .875rem
+						font-weight 300
+						font-family 'Roboto', sans-serif
+	.footer-media
+		color white
+		font-size em(13px)
+		@media screen and (min-width: 1024px)
+			text-align right
+			float right
+			margin 1em 0
+		span
+			display block
+			margin-bottom 10px
 		a
-			color white
+			display inline-block
+			circle(40px)
+			border 1px solid azul
+			margin 0 5px
+			svg
+				fill azul
+				size(40px)
+				padding 8px
+	.emprendox-footer
+		@media screen and (min-width: 1024px)
+			float right
+			width 40%
+			text-align right
+		img
+			height 25px
+			margin-bottom 5px
+			@media screen and (min-width: 1024px)
+				display block
+				float right
+				margin-bottom 10px
+		p
 			font-size em(12px)
-			text-decoration underline
-			
+			color border-color
+			@media screen and (min-width: 1024px)
+				font-size em(14px)
+				width 350px
+				float right
+				clear both
+	.copy-right
+		clear both
+		font-size em(13px)
+		color border-color
+		font-weight 300
+		line-height 35px
+		border-top 1px solid rgba(border-color, .25)
 
 /* ==========================================================================================
    FILTROS
